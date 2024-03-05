@@ -1,0 +1,31 @@
+﻿@model UsuarioModel
+
+@{
+    ViewData["Title"] = "Página de Login";
+}
+
+@if (TempData["MensagemDeErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["MensagemDeErro"]
+    </div>
+}
+
+@if (TempData["MensagemDeSucesso"] != null)
+{
+    <div class="alert alert-primary" role="alert">
+        @TempData["MensagemDeSucesso"]
+    </div>
+}
+
+<form onsubmit="return ValidarForm()" method="post" asp-controller="Login" asp-action="ChecarDados">
+    <div class="mb-3">
+        <label for="Email" class="form-label">Email</label>
+        <input type="text" class="form-control" id="Email" asp-for="Email">
+    </div>
+    <div class="mb-3">
+        <label for="Senha" class="form-label">Senha</label>
+        <input type="password" class="form-control" id="Senha" asp-for="Senha">
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>

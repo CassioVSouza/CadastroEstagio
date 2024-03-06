@@ -6,7 +6,6 @@ namespace Cadastro.Filtros
 {
     public class PaginaParaUsuarios : ActionFilterAttribute
     {
-    
         public override void OnActionExecuting(ActionExecutingContext context) //Busca por alguma sessão ativa, se nao encontrar, redireciona o usuario pra tela de login
         {
             var contaAtual = context.HttpContext.Session.GetString("ContaAtual");

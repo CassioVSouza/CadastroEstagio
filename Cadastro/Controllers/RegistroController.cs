@@ -33,6 +33,7 @@ namespace Cadastro.Controllers
             catch (Exception ex)
             {
                 _log.EscreverLog("Erro em RegistroController, Função (Registrar): " + ex.Message);
+
                 TempData["MensagemDeErro"] = "Não foi possível fazer o seu cadastro!";
                 return View("Index");
             }

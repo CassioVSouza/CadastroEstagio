@@ -1,1 +1,1 @@
-
+Erro em UsuarioRepositorio, função (PegarUsuario): Value cannot be null. (Parameter 'json')

@@ -18,7 +18,7 @@
     </div>
 }
 
-<form onsubmit="return ValidarForm()" method="post" asp-controller="Login" asp-action="ChecarDados">
+<form id="FormLogin" method="post" asp-controller="Login" asp-action="ChecarDados">
     <div class="mb-3">
         <label for="Email" class="form-label">Email</label>
         <input type="text" class="form-control" id="Email" asp-for="Email">

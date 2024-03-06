@@ -15,13 +15,14 @@ namespace Cadastro.Repositório
             _log = log;
             _contextAccessor = httpContextAccessor;
         }
+
         public void Registrar(UsuarioModel usuario)
         {
             try
             {
                 usuarios.Add(usuario);
                 var usuariosLista = JsonSerializer.Serialize(usuarios); //Resolvi criar uma sessão para armazenar as contas e fazer a função do banco de dados
-                _contextAccessor?.HttpContext?.Session.SetString("Contas", usuariosLista);
+                _contextAccessor?.HttpContext?.Session.SetString("Contas", usuariosLista); //Cria a sessão com os dados das contas
             }
             catch (Exception ex)
             {

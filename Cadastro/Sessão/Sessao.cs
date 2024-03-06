@@ -31,7 +31,7 @@ namespace Cadastro.Sessão
             try
             {
                 var stringSessao = _contextAccessor?.HttpContext?.Session.GetString("ContaAtual");
-                UsuarioModel usuario = JsonSerializer.Deserialize<UsuarioModel>(stringSessao);
+                UsuarioModel? usuario = JsonSerializer.Deserialize<UsuarioModel>(stringSessao);
 
                 if(string.IsNullOrEmpty(stringSessao)) { return null; }
 

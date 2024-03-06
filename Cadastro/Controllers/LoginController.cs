@@ -50,7 +50,7 @@ namespace Cadastro.Controllers
                 _log.EscreverLog("Erro em LoginController, função (ChecarDados): " + ex.Message);
 
                 TempData["MensagemDeErro"] = "Não foi possível realizar seu login, tente novamente!";
-                return RedirectToAction("Index");
+                return View("Index");
             }
         }
     }

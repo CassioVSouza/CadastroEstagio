@@ -1,6 +1,6 @@
 # Cadastro
 
-Sistema de Cadastro
+Sistema de Cadastro com validação de campos Client Side
 
 O sistema foi feito em uma aplicação WEB ASP.NET MVC com Razor
 
